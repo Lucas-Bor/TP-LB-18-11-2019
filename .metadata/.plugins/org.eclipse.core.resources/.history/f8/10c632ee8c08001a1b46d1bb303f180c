@@ -1,0 +1,69 @@
+package org.ldv.sio;
+
+public class Client {
+  private String nom;
+  private String prenom;
+  private String domicile;
+  private String livraison;
+
+  public Client(String nom, String prenom, String domicile) {
+    this.nom = nom;
+    this.prenom = prenom;
+    this.domicile = domicile;
+    this.livraison = domicile;
+  }
+
+  public Client(String nom, String prenom, String domicile, String livraison) {
+    this.nom = nom;
+    this.prenom = prenom;
+    this.domicile = domicile;
+    this.livraison = livraison;
+  }
+
+  public String getDomicile() {
+    return domicile;
+  }
+
+  public String getLivraison() {
+    return livraison;
+  }
+
+  public void setLivraison(String livraison) {
+    this.livraison = livraison;
+  }
+
+  public void setDomicile(String domicile) {
+    this.domicile = domicile;
+  }
+
+  public String getNom() {
+
+    return nom;
+  }
+
+  public void setNom(String nom) {
+
+    this.nom = nom;
+  }
+
+  public String getPrenom() {
+
+    return prenom;
+  }
+
+  public void setPrenom(String prenom) {
+
+    this.prenom = prenom;
+  }
+
+
+  @Override
+  public String toString() {
+    return "Client {" +
+            "nom = '" + nom + '\'' +
+            ", prenom = '" + prenom + '\'' +
+            ", domicile = '" + domicile + '\'' +
+            ", livraison = '" + livraison + '\'' 
+            '}';
+  }
+}
