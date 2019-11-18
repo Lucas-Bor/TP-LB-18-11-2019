@@ -16,23 +16,38 @@ public class ClientTest {
   }
 
   @Test
+  public void getNom() {
+    //assertEquals("Dijkstra", this.c.getNom());
+    this.c.getNom().equals("Dijkstra");
+  }
+
+  @Test
   public void setNom() {
-    this.clientLivraison.setNom(this.clientLivraison.getNom().toUpperCase());
-    assertEquals("nom", this.clientLivraison.getNom());
+    this.c.setNom(this.c.getNom().toUpperCase());
+    //assertEquals("DIJKSTRA", this.c.getNom());
+    this.c.getNom().equals("DIJKSTRA");
   }
 
   @Test
   public void getPrenom() {
-    assertEquals("prenom", this.c.getPrenom());
+    assertEquals("Edsger", this.c.getPrenom());
   }
 
   @Test
-  public void setLivraison() {
-    assertEquals(clientLivraison.getMivraison, this.clientLivraison.getDomicile());
+  public void setPrenom() {
+    this.c.setPrenom(this.c.getPrenom().toUpperCase());
+    //assertEquals("EDSGER", this.c.getPrenom());
+    this.c.getPrenom().equals("EDSGER");
+
   }
 
   @Test
-  public void setDomicile() {
-    assertEquals(clientLivraison.getDomicile, this.clientLivraison.getLivraison());
+  public void testLivraisonEgaleDomicile() {
+    assertEquals(clientLivraison.getLivraison, this.clientLivraison.getDomicile());
+  }
+
+  @Test
+  public void tesDomicileEgaleLivraison() {
+    assertEquals(clientLivraison.getDomicile, this.clientLivraison.getLivraison(0));
   }
 }
